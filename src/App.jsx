@@ -4,7 +4,6 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import styled from 'styled-components';
 import infoImg from '../src/assets/info_container.svg'
-import infoImg2 from '/Users/huijing/testimage/src/assets/info_container.svg'
 
 function App() {
 
@@ -12,8 +11,7 @@ function App() {
     <>
       <p>상대경로 이용:</p>
       <ImgContainer/>
-      <p>절대경로 이용:</p>
-      <ImgContainer2/>
+      {/* 절대경로 실패 */}
       <p>SVG 파일 이용:</p>
       <ImgContainer3/>
     </>
@@ -42,18 +40,6 @@ const ImgContainer = styled.div`
   filter: drop-shadow(8px 8px 8px rgba(0, 0, 0, 0.1));
 `;
 
-
-const ImgContainer2 = styled.div`
-  background-image: url(${infoImg2});
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
-  width: 340px; 
-  height: 130px; 
-  margin: 0 auto;
-  margin-bottom: 10px;
-  filter: drop-shadow(8px 8px 8px rgba(0, 0, 0, 0.1));
-`;
 
 const ImgContainer3 = styled.div`
   background-image: url('data:image/svg+xml,${encodedSvg}');
